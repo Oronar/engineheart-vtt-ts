@@ -1,0 +1,30 @@
+{
+  "name": "engineheart",
+  "title": "Engine Heart",
+  "description": "A Foundry VTT system module for Engine Heart.",
+  "version": "0.1.0",
+  "author": "Oronar",
+  "authors": [
+    {
+      "name": "Oronar",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "scripts": [],
+  "esmodules": ["engineheart.js"],
+  "styles": ["engineheart.css"],
+  "packs": [],
+  "languages": [],
+  "gridDistance": 1,
+  "gridUnits": "",
+  "minimumCoreVersion": "0.6.6",
+  "compatibleCoreVersion": "0.6.6",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "",
+  "readme": "",
+  "bugs": "",
+  "changelog": ""
+}

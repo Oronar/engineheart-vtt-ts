@@ -1,0 +1,65 @@
+{
+  "Actor": {
+    "types": [
+      "robot"
+    ],
+    "templates": {
+      "robot": {
+        "player": "",
+        "originalPurpose": "",
+        "attributes": {
+          "intelligence": {
+            "realitycom": 0,
+            "humancom": 0,
+            "digicon": 0,
+            "mechanicon": 0
+          },
+          "chassis": {
+            "dexterity": 0,
+            "mobility": 0,
+            "perception": 0,
+            "reflexes": 0,
+            "strength": 0
+          },
+          "crux": {
+            "durability": 0,
+            "buffer": 0,
+            "size": 0,
+            "power": 0
+          }
+        },
+        "derivedAttributes": {
+          "physicalInteraction": {
+            "interactionPool": 0,
+            "targetNumberToBeStruck": 0,
+            "damageFromStrike": 0
+          },
+          "movement": {
+            "initiative": 0,
+            "speed": 0
+          },
+          "thresholds": {
+            "osThreshold": {
+              "max": 0,
+              "current": 0
+            },
+            "damageThreshold": {
+              "max": 0,
+              "current": 0
+            }
+          }
+          
+        }
+      }
+    },
+    "robot": {
+      "templates": [
+        "robot"
+      ]
+    }
+  },
+  "Item": {
+    "types": [],
+    "templates": []
+  }
+}

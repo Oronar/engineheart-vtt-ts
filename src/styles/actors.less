@@ -1,0 +1,62 @@
+.robotinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+
+    span {
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+
+        label {
+            padding-right: 5px;
+        }
+    }
+
+    .purpose {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        label {
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.attributes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+
+    .attribute-ratings {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            white-space: nowrap;
+            align-items: center;
+            margin: 10px;
+
+            label {
+                padding-left: 5px;
+                text-transform: capitalize;
+            }
+
+            input {
+                width: 50px;
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+
+        
+    }
+    .threshold {
+            border: dotted;
+            white-space: normal !important;
+        }
+}

@@ -1,0 +1,103 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="robotinfo">
+        <div class="unit-name">
+            <label for="unitname">UNIT NAME</label>
+            <input id="unitname" type="text" name="name" value="{{actor.name}}">     
+        </div>
+        <div class="player-name">
+            <label for="playername">PLAYER</label>
+            <input id="playername" type="text" name="data.player" value="{{data.player}}">
+        </div>
+        <div class="purpose">
+            <label for="purpose">ORIGINAL PURPOSE</label>
+            <input id="purpose" type="text" name="data.originalPurpose" value="{{data.originalPurpose}}">
+        </div>
+    </div>
+    
+    <div class="attributes">  
+        <div class="attribute-ratings">
+            <div>INTELLIGENCE</div>
+            {{#each data.attributes.intelligence as |attribute id|}}
+                <div>
+                    <input id="{{id}}" type="text" name="data.attributes.intelligence.{{id}}" value="{{attribute}}" data-dtype="Number">
+                    <label for="{{id}}">{{id}}</label>
+                </div> 
+            {{/each}}
+        </div>
+
+        <div class="attribute-ratings">
+            <div>CHASSIS</div>
+            {{#each data.attributes.chassis as |attribute id|}}
+                <div>
+                    <input id="{{id}}" type="text" name="data.attributes.chassis.{{id}}" value="{{attribute}}" data-dtype="Number">
+                    <label for="{{id}}">{{id}}</label>
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="attribute-ratings">
+            <div>CRUX</div>
+            {{#each data.attributes.crux as |attribute id|}}
+                <div>
+                    <input id="{{id}}" type="text" name="data.attributes.crux.{{id}}" value="{{attribute}}" data-dtype="Number">
+                    <label for="{{id}}">{{id}}</label>
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="attribute-ratings">
+            <div>Physical Interaction</div>
+            <div>
+                <input type="text" value="{{data.derivedAttributes.physicalInteraction.interactionPool}}" data-dtype="number" readonly>
+                <label>Interaction Pool<br>(Dex + Ref)</label>
+            </div>
+            <div>
+                <input type="text" value="{{data.derivedAttributes.physicalInteraction.targetNumberToBeStruck}}" data-dtype="number" readonly>
+                <label>TN to be struck<br>(Mobil + Ref)</label>
+            </div>
+            <div>
+                <input type="text" value="{{data.derivedAttributes.physicalInteraction.damageFromStrike}}" data-dtype="number" readonly>
+                <label>Damage from Strike<br>(Str / 2, round down)</label>
+            </div>
+        </div>
+
+        <div class="attribute-ratings">
+            <div>Movement</div>
+            <div>
+                <input type="text" value="{{data.derivedAttributes.movement.initiative}}" data-dtype="number" readonly>
+                <label>Initiative<br>(1d10 + Ref)</label>
+            </div>
+            <div>
+                <input type="text" value="{{data.derivedAttributes.movement.speed}}" data-dtype="number" readonly>
+                <label>Speed<br>(Mob + Ref)<br>k/hour<br>m/round</label>
+            </div>
+        </div>
+
+        <div class="attribute-ratings">
+            <div>Thresholds</div>
+            <div>
+                OS Threshold
+                <br>
+                (DigiCon + Buffer)
+            </div>
+            <div>
+                <input type="text" name="data.derivedAttributes.thresholds.osThreshold.current"
+                    value="{{data.derivedAttributes.thresholds.osThreshold.current}}" data-dtype="number">
+                /
+                <input type="text" value="{{data.derivedAttributes.thresholds.osThreshold.max}}" data-dtype="number" readonly>
+            </div>
+
+            <div>
+                Damage Threshold
+                <br>
+                (Durability + Size)
+            </div>
+            <div>
+                <input type="text" name="data.derivedAttributes.thresholds.damageThreshold.current"
+                    value="{{data.derivedAttributes.thresholds.damageThreshold.current}}" data-dtype="number">
+                /
+                <input type="text" value="{{data.derivedAttributes.thresholds.damageThreshold.max}}" data-dtype="number" readonly>
+            </div>
+        </div>
+    </div>
+</form>
