@@ -14,7 +14,9 @@
 import { registerSettings } from './module/settings.js';
 import { preloadTemplates } from './module/preloadTemplates.js';
 import { RobotActorSheet } from './module/actor/sheets/RobotActorSheet.js';
+import { ComponentItemSheet } from './module/item/sheets/ComponentItemSheet.js';
 import { RobotActor } from './module/actor/RobotActor.js';
+import { ComponentItem } from './module/item/ComponentItem.js';
 
 /* ------------------------------------ */
 /* Initialize system					*/
@@ -26,6 +28,7 @@ Hooks.once('init', async function() {
 
 	// Assign custom classes and constants here
 	CONFIG.Actor.entityClass = RobotActor;
+	CONFIG.Item.entityClass = ComponentItem;
 	
 	// Register custom system settings
 	registerSettings();
@@ -36,6 +39,9 @@ Hooks.once('init', async function() {
 	// Register custom sheets (if any)
 	Actors.unregisterSheet('core', ActorSheet);
 	Actors.registerSheet('engineheart', RobotActorSheet, { types: ['robot'], makeDefault: true });
+
+	Items.unregisterSheet('core', ItemSheet);
+	Items.registerSheet('engineheart', ComponentItemSheet, { types: ["component"], makeDefault: true });
 });
 
 /* ------------------------------------ */

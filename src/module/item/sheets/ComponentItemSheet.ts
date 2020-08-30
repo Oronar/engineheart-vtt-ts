@@ -1,4 +1,4 @@
-export class RobotActorSheet extends ActorSheet {
+export class ComponentItemSheet extends ItemSheet {
     /** @override */
     static get defaultOptions() {
         return super.defaultOptions;
@@ -9,6 +9,6 @@ export class RobotActorSheet extends ActorSheet {
     }
 
     get template() {
-        return 'systems/engineheart/templates/actor/robot-actor-sheet.html';
+        return 'systems/engineheart/templates/item/component-item-sheet.html';
     }
 }

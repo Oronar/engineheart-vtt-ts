@@ -59,7 +59,19 @@
     }
   },
   "Item": {
-    "types": [],
-    "templates": []
+    "types": ["component"],
+    "templates": {
+      "component": {
+        "description": "",
+        "rating": 1,
+        "cost": 1,
+        "costPerRating": true
+      }
+    },
+    "component": {
+      "templates": [
+        "component"
+      ]
+    }
   }
 }

@@ -1,0 +1,24 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div>
+        <div>
+            <label for="itemname">Name</label>
+            <input id="itemname" type="text" name="name" value="{{item.name}}">
+        </div>
+        <div>
+            <label for="cost">Cost</label>
+            <input id="cost" type="text" name="data.cost" value="{{data.cost}}" data-dtype="Number">
+        </div>
+        <div>
+            <label for="perrating">Cost per rating?</label>
+            <input id="perrating" type="checkbox" name="data.costPerRating" data-dtype="Boolean" {{checked data.costPerRating}}>
+        </div>
+        <div>
+            <label for="rating">Rating</label>
+            <input id="rating" type="text" name="data.rating" value="{{data.rating}}" data-dtype="Number">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea id="description" type="text" name="data.description" rows=25>{{data.description}}</textarea>
+        </div>
+    </div>
+</form>
